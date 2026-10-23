@@ -1,0 +1,114 @@
+{
+  "bundle_version": "1.0.0",
+  "upstream_repository": "https://github.com/addyosmani/agent-skills",
+  "upstream_revision": "aeac41d4d005999432bb7312f7ff06383a91d59d",
+  "reviewed_date": "2026-10-23",
+  "license": "MIT",
+  "skills": [
+    "spec-driven-development",
+    "planning-and-task-breakdown",
+    "api-and-interface-design",
+    "test-driven-development",
+    "debugging-and-error-recovery",
+    "security-and-hardening"
+  ],
+  "review_scope": "All six SKILL.md files, all four supporting reference documents, MIT license. Markdown examples not executed. No upstream scripts, hooks, agents, commands, plugin manifests or workflows included.",
+  "source_files": [
+    {
+      "upstream_path": "skills/spec-driven-development/SKILL.md",
+      "bundle_path": "skills/spec-driven-development/SKILL.md",
+      "upstream_sha256": "c4b97ce3d7f24be0e67fd612c7595f65504872e3a9f8d338d098b2363fdb66ef",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    },
+    {
+      "upstream_path": "references/definition-of-done.md",
+      "bundle_path": "skills/planning-and-task-breakdown/references/upstream/definition-of-done.md",
+      "upstream_sha256": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee",
+      "adaptation": "Relocated unchanged inside skill; referring relative paths rewritten."
+    },
+    {
+      "upstream_path": "skills/planning-and-task-breakdown/SKILL.md",
+      "bundle_path": "skills/planning-and-task-breakdown/SKILL.md",
+      "upstream_sha256": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    },
+    {
+      "upstream_path": "skills/api-and-interface-design/SKILL.md",
+      "bundle_path": "skills/api-and-interface-design/SKILL.md",
+      "upstream_sha256": "e83d34f52ff12dd8a7c5134cd7e8140ea4541ec65e204f8a1e4cd366e30c4192",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    },
+    {
+      "upstream_path": "references/testing-patterns.md",
+      "bundle_path": "skills/test-driven-development/references/upstream/testing-patterns.md",
+      "upstream_sha256": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "adaptation": "Relocated unchanged inside skill; referring relative paths rewritten."
+    },
+    {
+      "upstream_path": "skills/test-driven-development/SKILL.md",
+      "bundle_path": "skills/test-driven-development/SKILL.md",
+      "upstream_sha256": "a3aa6ba95638497025577469eda10ed17918698209615aeafbc26f131bf2469d",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    },
+    {
+      "upstream_path": "skills/debugging-and-error-recovery/SKILL.md",
+      "bundle_path": "skills/debugging-and-error-recovery/SKILL.md",
+      "upstream_sha256": "21f3960f5d7ae2cc95c40896545004dbbcbbd752ea65fc2d53962554d4174220",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    },
+    {
+      "upstream_path": "references/security-checklist.md",
+      "bundle_path": "skills/security-and-hardening/references/upstream/security-checklist.md",
+      "upstream_sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "adaptation": "Relocated unchanged inside skill; referring relative paths rewritten."
+    },
+    {
+      "upstream_path": "skills/security-and-hardening/SKILL.md",
+      "bundle_path": "skills/security-and-hardening/SKILL.md",
+      "upstream_sha256": "2e3fc60eed5aba97fe416f3f3c9317fdb014a682925ec70a733c3ff99e4b9858",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    },
+    {
+      "upstream_path": "references/security-checklist.md",
+      "bundle_path": "skills/security-and-hardening/references/upstream/security-checklist.md",
+      "upstream_sha256": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "adaptation": "Relocated unchanged inside skill; referring relative paths rewritten."
+    },
+    {
+      "upstream_path": "skills/security-and-hardening/references/hardening-patterns.md",
+      "bundle_path": "skills/security-and-hardening/references/hardening-patterns.md",
+      "upstream_sha256": "2e1b93a502b4cdb0258404441f3aab029b0cce4003fbbcc61af9a2de18bab9ab",
+      "adaptation": "Portable host guidance in SKILL.md; reference paths relocated where needed; optional unselected file references pinned to upstream."
+    }
+  ],
+  "installed_files": {
+    "spec-driven-development": {
+      "LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "SKILL.md": "c1fcbd12c075f95d7ee86d49bd28e85b2a1327a5e7184a64d898fe3932d4c94b"
+    },
+    "planning-and-task-breakdown": {
+      "LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "references/upstream/definition-of-done.md": "d1c75d2ae65d2c7a9cd01f93fa8de63e00e75f2fe5d08be224d576157054dcee",
+      "SKILL.md": "a52db89484a0b79959b11cc768a9bc699c6cfc1f3397bd347b1594bdce3e145b"
+    },
+    "api-and-interface-design": {
+      "LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "SKILL.md": "fb2cfc99ea2d6880a03a8607111f7968836f8be11120f96b7fd24aa73cb8f807"
+    },
+    "test-driven-development": {
+      "LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "references/upstream/testing-patterns.md": "f0bf05acd0edcadc27297ad5b74f104c8103ccfedba1a05cd6d6ae4af8364c56",
+      "SKILL.md": "fc5fc4f0a879434461a6b30caaaf397229e835553f870c2a21e0e5bdad65e921"
+    },
+    "debugging-and-error-recovery": {
+      "LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "SKILL.md": "cefe5bf231fd7a2f942ab881a5fb001db88fab449923cba55e6b63cab691522a"
+    },
+    "security-and-hardening": {
+      "LICENSE": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "references/hardening-patterns.md": "00f1edf711c48d77b063e02c7cbd3f6c1058ce68b1f0904db12bc72076aed3d3",
+      "references/upstream/security-checklist.md": "37774056502fe8970dcd2fd27dca5fa31f2a55232649fc3056c89c3af7d62755",
+      "SKILL.md": "9035962aac194d53b445f14854a1490d749f351c0cdbc7169d17785aa86883ee"
+    }
+  }
+}
