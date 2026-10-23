@@ -13,6 +13,8 @@ NAMES = (
     'spec-driven-development', 'planning-and-task-breakdown',
     'api-and-interface-design', 'test-driven-development',
     'debugging-and-error-recovery', 'security-and-hardening',
+    'codebase-design', 'verification-before-completion',
+    'ui-ux-pro-max', 'vercel-react-best-practices',
 )
 ROOT = Path(__file__).resolve().parent
 
@@ -66,17 +68,20 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('action', choices=['install', 'verify', 'backup'], nargs='?', default='install')
     parser.add_argument('--destination', type=Path, default=Path.home() / '.agents' / 'skills')
+    parser.add_argument('--add-missing', action='store_true', help='Skip identical installed skills; install missing only; refuse any modified collision')
     args = parser.parse_args()
+    if args.add_missing and args.action != 'install':
+        parser.error('--add-missing applies only to install')
     expected = payload()  # Validate every source before any mutation.
     destination = plain_path(args.destination)
     if destination == Path(destination.anchor):
         raise ValueError('Refusing a filesystem root as destination')
     if args.action == 'verify':
         check_installed(destination, expected)
-        print('Verified six installed skills and every supporting file at ' + str(destination))
+        print('Verified ten installed skills and every supporting file at ' + str(destination))
         return
     if args.action == 'backup':
-        # Explicit command is consent to move these six unchanged owned folders.
+        # Explicit command is consent to move these ten unchanged owned folders.
         # No deletion, broad cleanup, overwrite or fallback path.
         check_installed(destination, expected)
         stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
@@ -84,16 +89,22 @@ def main():
         backup.mkdir(parents=True, exist_ok=False)
         for name in NAMES:
             shutil.move(str(destination / name), str(backup / name))
-        print('Moved six unchanged skills to recoverable backup: ' + str(backup))
+        print('Moved ten unchanged skills to recoverable backup: ' + str(backup))
         return
     conflicts = [name for name in NAMES if os.path.lexists(destination / name)]
-    if conflicts:
+    if args.add_missing:
+        for name in conflicts:
+            if inventory(destination / name) != expected[name]:
+                raise ValueError('Modified existing destination; nothing installed: ' + name)
+    if conflicts and not args.add_missing:
         raise ValueError('Nothing installed. Existing destinations: ' + ', '.join(conflicts)
                          + '. See README update/backup instructions.')
     destination.mkdir(parents=True, exist_ok=True)
     # mkdir(exist_ok=False) prevents replacing a destination created after preflight.
     # On interruption, preserve partial files for inspection; never silently clean up.
     for name in NAMES:
+        if args.add_missing and name in conflicts:
+            continue
         target = destination / name
         target.mkdir(exist_ok=False)
         for relative in expected[name]:
@@ -103,7 +114,7 @@ def main():
             with output.open('xb') as handle:
                 handle.write(source.read_bytes())
     check_installed(destination, expected)
-    print('Installed and verified six skills at ' + str(destination))
+    print('Installed and verified ten skills at ' + str(destination))
     print('Available on the next Codex turn; restart Codex if they do not appear.')
 
 

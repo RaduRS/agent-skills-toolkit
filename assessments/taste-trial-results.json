@@ -1,0 +1,33 @@
+{
+  "clean.html": {
+    "exit_code": 0,
+    "result": {
+      "files": 1,
+      "findings": []
+    }
+  },
+  "brand.html": {
+    "exit_code": 1,
+    "result": {
+      "files": 1,
+      "findings": [
+        {
+          "level": "FAIL",
+          "id": "mono",
+          "file": "brand.html",
+          "line": 3,
+          "match": "font-family:monospace",
+          "message": "Monospace type. Only literal code may be monospace."
+        },
+        {
+          "level": "FAIL",
+          "id": "purple",
+          "file": "brand.html",
+          "line": 3,
+          "match": "#6366f1",
+          "message": "Indigo / violet \u2014 the generated-page accent."
+        }
+      ]
+    }
+  }
+}
