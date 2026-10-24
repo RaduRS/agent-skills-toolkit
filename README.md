@@ -15,10 +15,10 @@ This is a reviewed, instruction-only subset, not the full upstream plugin. No ho
 
 ## Install on Windows
 
-Requires GitHub access to this private repository, Git (or GitHub CLI) and Python 3.9+. Python is already available on the Windows machine used to prepare this bundle.
+Requires internet access, Git and Python 3.9+. This repository is public; cloning does not require GitHub authentication. Python is already available on the Windows machine used to prepare this bundle.
 
 ```powershell
-gh repo clone RaduRS/agent-skills-toolkit
+git clone https://github.com/RaduRS/agent-skills-toolkit.git
 Set-Location agent-skills-toolkit
 # Read install.py, manifest.json and the skill files before running.
 python .\install.py install
@@ -27,7 +27,7 @@ python .\install.py verify
 
 ## Install on macOS
 
-Requires GitHub access, Git (or GitHub CLI) and an existing Python 3.9+ installation. This bundle does not install Python or any packages. If `python3` is missing, install Python through your normal trusted developer setup first.
+Requires internet access, Git and an existing Python 3.9+ installation. This public repository can be cloned without GitHub authentication. This bundle does not install Python or any packages. If `python3` is missing, install Python through your normal trusted developer setup first.
 
 ```sh
 git clone https://github.com/RaduRS/agent-skills-toolkit.git
